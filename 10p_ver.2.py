@@ -113,9 +113,22 @@ for l in range(st, en):
                         pp = "math.factorial(" + k + ")"
                     else:
                         pp = p
+
+                        
                         
                     #四則演算リストから3つを選ぶ(重複あり)
                     symbol_pattern = itertools.combinations_with_replacement(symbol_list, 3)
+                    symbol_pattern_list = []
+                    
+                    #それを並び替える
+                    for a in symbol_pattern:
+                        x = itertools.permutations(a)
+                        for b in x:
+                            symbol_pattern_list.append(b)
+                    
+                    #重複削除
+                    symbol_pattern_list = set(symbol_pattern_list)
+                    
                     
                     #それで総当たり
                     for q in symbol_pattern:
