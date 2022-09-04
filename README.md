@@ -1,3 +1,6 @@
+# サイトでも使えるようにした(Beta
+https://tinnguruma.github.io/10puzzle
+
 # 10puzzle
 
 10パズルを階乗、平方根、括弧をつけてときます
